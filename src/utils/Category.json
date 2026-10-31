@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Pull Toys",
+    "image": "/toy1.jpg",
+    "color": "#ffb7d7"
+  },
+  {
+    "id": 2,
+    "name": "Travel Treasures",
+    "image": "/toy2.jpg",
+    "color": "#b7fbae"
+  },
+  {
+    "id": 3,
+    "name": "Wooden Wonders",
+    "image": "/toy3.jpg",
+    "color": "#bfd5f3"
+  },
+  {
+    "id": 4,
+    "name": "Melody Mates",
+    "image": "/toy4.jpg",
+    "color": "#e1ed92"
+  },
+  {
+    "id": 5,
+    "name": "Soft Toys",
+    "image": "/toy5.jpg",
+    "color": "#ddc8f6"
+  },
+  {
+    "id": 6,
+    "name": "Dolls & Figures",
+    "image": "/toy6.jpg",
+    "color": "#efc7b1"
+  },
+  {
+    "id": 7,
+    "name": "Building Blocks",
+    "image": "/toy7.jpg",
+    "color": "#b5dfdb"
+  }
+]

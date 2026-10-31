@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "image": "toys/toy1.jpg",
+    "name": "Xylophone",
+    "price": 2000,
+    "MRP": 3500,
+    "category": "musical",
+    "material": "plastic"
+  },
+  {
+    "id": 2,
+    "image": "toys/toy2.jpg",
+    "name": "Musical Crab",
+    "price": 2700,
+    "MRP": 3800,
+    "category": "musical",
+    "material": "plastic"
+  },
+  {
+    "id": 3,
+    "image": "toys/toy3.jpg",
+    "name": "Soft Teddy",
+    "price": 3500,
+    "MRP": 4500,
+    "category": "soft toy",
+    "material": "woolen"
+  },
+  {
+    "id": 4,
+    "image": "toys/toy4.jpg",
+    "name": "Wooden Engine",
+    "price": 5000,
+    "MRP": 6700,
+    "category": "vehicle",
+    "material": "Wood"
+  },
+  {
+    "id": 5,
+    "image": "toys/toy5.jpg",
+    "name": "Wooden Airplane",
+    "price": 7000,
+    "MRP": 8600,
+    "category": "vehicle",
+    "material": "Wood"
+  },
+  {
+    "id": 6,
+    "image": "toys/toy6.jpg",
+    "name": "Scooter",
+    "price": 1050,
+    "MRP": 1200,
+    "category": "Bike",
+    "material": "Plastic"
+  }
+]

@@ -1,0 +1,42 @@
+/* NAVBAR */
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap");
+
+.Nav-font {
+  font-family: "Ubuntu", sans-serif;
+  color: rgb(255, 250, 250);
+}
+
+.top-bar {
+  background-color: #0654a1;
+  color: rgb(249, 246, 246);
+}
+
+.category-card {
+  font-family: "Baloo 2", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.category-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 5px solid;
+
+  padding: 6px;
+  background: white;
+
+  transition: all 0.35s ease;
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.category-image:hover {
+  transform: translateY(-8px) scale(1.05);
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
