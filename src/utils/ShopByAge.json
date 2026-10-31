@@ -1,0 +1,26 @@
+[
+  {
+    "age": "0-12",
+    "image": "/star1.jpg"
+  },
+  {
+    "age": "1-2",
+    "image": "/star2.jpg"
+  },
+  {
+    "age": "3 +",
+    "image": "/star3.jpg"
+  },
+  {
+    "age": "5 +",
+    "image": "/star4.jpg"
+  },
+  {
+    "age": "10 +",
+    "image": "/star5.jpg"
+  },
+  {
+    "age": "12 +",
+    "image": "/star6.jpg"
+  }
+]
