@@ -18,8 +18,8 @@ import Pagination from "../components/Pagination";
 
 function Shop() {
   const toyService = Container.toyService;
-  const cartItems = useSelector((state: any) => state.cart);
-  const toys = useSelector((state: any) => state.toy);
+  const cartItems = useSelector((state: RootState) => state.cart);
+  const toys = useSelector((state: RootState) => state.toy);
   const userId = useSelector((state: RootState) => state.authentication.userId);
 
   const [wishlistItems, setWishlistItems] = useState<WishlistItem[]>([]);
@@ -27,7 +27,6 @@ function Shop() {
   const [message, setMessage] = useState("");
 
   const [loading, setLoading] = useState(true);
-  const [currentPage, setCurrentPage] = useState(1);
   const toysPerPage = 4;
   const [error, setError] = useState("");
 
@@ -36,11 +35,13 @@ function Shop() {
   const [searchParams] = useSearchParams();
 
   const searchText = searchParams.get("search") || "";
+  const [currentPage, setCurrentPage] = useState(1);
+  const [previousSearchText, setPreviousSearchText] = useState(searchText);
 
-  // Reset pagination when the search text changes
-  useEffect(() => {
+  if (previousSearchText !== searchText) {
+    setPreviousSearchText(searchText);
     setCurrentPage(1);
-  }, [searchText]);
+  }
 
   // Get toys from API
   useEffect(() => {

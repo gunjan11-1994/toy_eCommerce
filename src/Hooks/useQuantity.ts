@@ -1,16 +1,18 @@
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const useQuantity = (
     stock: number,
     initialQuantity: number = 1
 ) => {
     const [quantity, setQuantity] = useState<number>(initialQuantity);
+    const [previousInitialQuantity, setPreviousInitialQuantity] =
+        useState(initialQuantity);
 
-    // Update quantity when initialQuantity changes
-    useEffect(() => {
+    if (previousInitialQuantity !== initialQuantity) {
+        setPreviousInitialQuantity(initialQuantity);
         setQuantity(initialQuantity);
-    }, [initialQuantity]);
+    }
 
     const increase = () => {
         setQuantity((quantity) =>
@@ -34,4 +36,3 @@ const useQuantity = (
 };
 
 export default useQuantity;
-

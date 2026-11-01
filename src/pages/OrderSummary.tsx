@@ -1,13 +1,13 @@
 import { Box, Paper, Typography } from "@mui/material";
 import { useSelector } from "react-redux";
-import type { CartItem } from "../interface";
 import { formatCurrency } from "../utils/formatters";
+import type { RootState } from "../Redux/store";
 
 function OrderSummary() {
-  const cartItem = useSelector((state: any) => state.cart);
+  const cartItem = useSelector((state: RootState) => state.cart);
 
   const total = cartItem.reduce(
-    (sum: number, item: CartItem) => sum + item.price * item.quantity,
+    (sum, item) => sum + item.price * item.quantity,
     0,
   );
 
@@ -56,7 +56,7 @@ function OrderSummary() {
           </Box>
 
           {/* Products */}
-          {cartItem.map((item: CartItem) => (
+          {cartItem.map((item) => (
             <Box
               key={item.id}
               sx={{

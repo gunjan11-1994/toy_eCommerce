@@ -7,6 +7,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../Redux/authSlice";
 import { Badge } from "@mui/material";
+import type { RootState } from "../../Redux/store";
 
 interface HeaderProps {
   onLoginClick: () => void;
@@ -15,15 +16,17 @@ interface HeaderProps {
 
 const TopBar = ({ onLoginClick, onRegitrsationClick }: HeaderProps) => {
   const dispatch = useDispatch();
-  const username = useSelector((state: any) => state.authentication.username);
+  const username = useSelector(
+    (state: RootState) => state.authentication.username,
+  );
   const isLoggedIn = useSelector(
-    (state: any) => state.authentication.isLoggedIn,
+    (state: RootState) => state.authentication.isLoggedIn,
   );
 
-  const cartItems = useSelector((state: any) => state.cart);
+  const cartItems = useSelector((state: RootState) => state.cart);
 
   const cartCount = cartItems.reduce(
-    (total: number, item: any) => total + item.quantity,
+    (total, item) => total + item.quantity,
     0,
   );
 
@@ -114,7 +117,7 @@ const TopBar = ({ onLoginClick, onRegitrsationClick }: HeaderProps) => {
               variant="contained"
               color="info"
               startIcon={<LogoutIcon />}
-              onClick={() => dispatch(logout(username))}
+              onClick={() => dispatch(logout())}
             >
               Logout
             </Button>

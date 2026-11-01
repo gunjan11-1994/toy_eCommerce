@@ -21,7 +21,7 @@ function useFetch<T>(url: string) {
                 const result: T[] = await response.json();
 
                 setData(result);
-            } catch (error) {
+            } catch {
                 setError("Failed to load toys");
             }
             finally {
