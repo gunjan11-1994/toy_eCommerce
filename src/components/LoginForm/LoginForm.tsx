@@ -28,6 +28,7 @@ function LoginForm({ open, onClose, onLoginSuccess }: LoginFormProps) {
   // const dispatch = useDispatch();
   const [username, setusername] = useState("");
   const [password, setPassword] = useState("");
+  console.log("username:", username);
 
   // Field validation errors
   const [errors, setErrors] = useState({
