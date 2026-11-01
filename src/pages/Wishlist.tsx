@@ -13,16 +13,17 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import Container from "../di/Container";
 import { addToCart, increaseQuantity } from "../Redux/cartSlice";
 import cartService from "../services/cartService";
+import type { RootState } from "../Redux/store";
 
 const Wishlist = () => {
   const toyService = Container.toyService;
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const navigate = useNavigate();
-  const toys = useSelector((state: any) => state.toy);
-  const cartItems = useSelector((state: any) => state.cart);
+  const toys = useSelector((state: RootState) => state.toy);
+  const cartItems = useSelector((state: RootState) => state.cart);
 
-  const userId = useSelector((state: any) => state.authentication.userId);
+  const userId = useSelector((state: RootState) => state.authentication.userId);
 
   const handleFavorite = async (toy: Toy) => {
     try {
